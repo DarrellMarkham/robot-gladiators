@@ -1,5 +1,5 @@
 var playerName = window.prompt("What is your robot's name?");
-var playerHealth = 100;
+var playerHealth = 120;
 var playerAttack = 10;
 var playerMoney = 10;
 
@@ -67,7 +67,7 @@ var fight = function(enemyName) {
 // function to start a new game
 var startGame = function() {
   // reset player stats
-  playerHealth = 100;
+  playerHealth = 120;
   playerAttack = 10;
   playerMoney = 10;
 
@@ -141,12 +141,12 @@ var shop = function() {
   switch (shopOptionPrompt) {
     case 'REFILL':
     case 'refill':
-      if (playerMoney >= 7) {
-        window.alert("Refilling player's health by 20 for 7 dollars.");
+      if (playerMoney >= 5) {
+        window.alert("Refilling player's health by 25 for 5 dollars.");
 
         // increase health and decrease money
-        playerHealth = playerHealth + 20;
-        playerMoney = playerMoney - 7;
+        playerHealth = playerHealth + 25;
+        playerMoney = playerMoney - 5;
     }
     else {
         window.alert("You don't have enough money!");
@@ -155,11 +155,11 @@ var shop = function() {
     case 'UPGRADE':
     case 'upgrade':
       if (playerMoney >= 7) {
-        window.alert("Upgrading player's attack by 6 for 7 dollars.");
+        window.alert("Upgrading player's attack by 8 for 10 dollars.");
 
         // increase attack and decrease money
-        playerAttack = playerAttack + 6;
-        playerMoney = playerMoney - 7;
+        playerAttack = playerAttack + 8;
+        playerMoney = playerMoney - 10;
     }
     else {
         window.alert("You don't have enough money!");
